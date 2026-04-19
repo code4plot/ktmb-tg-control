@@ -1,3 +1,5 @@
+functions-framework
+python-telegram-bot
 flask
 gunicorn
 requests
