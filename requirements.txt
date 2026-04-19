@@ -1,6 +1,5 @@
 functions-framework
 python-telegram-bot
-telegram
 flask
 gunicorn
 requests
