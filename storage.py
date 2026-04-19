@@ -20,15 +20,18 @@ def download_json(name: str, default: dict[str, Any]) -> dict[str, Any]:
 
 
 def upload_json(name: str, data: dict[str, Any]) -> None:
-    _blob(name).upload_from_string(json.dumps(data, indent=2), content_type="application/json")
+    _blob(name).upload_from_string(
+        json.dumps(data, indent=2),
+        content_type="application/json",
+    )
 
 
 def load_config() -> dict[str, Any]:
-    return download_json("checker/config.json", {})
+    return download_json("config.json", {})
 
 
 def save_config(cfg: dict[str, Any]) -> None:
-    upload_json("checker/config.json", cfg)
+    upload_json("config.json", cfg)
 
 
 def load_runtime_status() -> dict[str, Any]:
