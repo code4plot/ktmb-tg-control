@@ -27,15 +27,15 @@ def upload_json(name: str, data: dict[str, Any]) -> None:
 
 
 def load_config() -> dict[str, Any]:
-    return download_json("config.json", {})
+    return download_json("checker/config.json", {})
 
 
 def save_config(cfg: dict[str, Any]) -> None:
-    upload_json("config.json", cfg)
+    upload_json("checker/config.json", cfg)
 
 
 def load_runtime_status() -> dict[str, Any]:
-    return download_json("runtime_status.json", {
+    return download_json("checker/runtime_status.json", {
         "is_running": False,
         "run_started_at": "",
         "last_check_time": "",
